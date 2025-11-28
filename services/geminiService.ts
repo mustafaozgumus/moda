@@ -1,5 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 
+declare const process: { env: { [key: string]: string | undefined } };
+
 // Optimized image processing: Resizes large images to max 1536px to ensure fast API upload and prevent timeouts
 const processImage = (file: File): Promise<{ data: string; mimeType: string }> => {
   return new Promise((resolve, reject) => {

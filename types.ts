@@ -19,3 +19,10 @@ export enum ImageType {
   GARMENT = 'GARMENT',
   MODEL = 'MODEL',
 }
+
+declare global {
+  interface AIStudio {
+    hasSelectedApiKey(): Promise<boolean>;
+    openSelectKey(): Promise<void>;
+  }
+}
